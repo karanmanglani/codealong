@@ -1,6 +1,5 @@
 
 const notes = [
-    {},
     {
         title: 'Title 1',
         body: 'Body 1'
@@ -66,4 +65,15 @@ const findNote = function(notes,text){
     })
 }
 
+const sortNotes = function(notes){
+    notes.sort(function(a , b){
+        if(a.title.toLowerCase() < b.title.toLowerCase()){
+            return -1
+        }else{
+            return 1
+        }
+    })
+}
+sortNotes(notes)
+console.log(notes)
 console.log(findNote(notes, 'dy'))

@@ -27,5 +27,21 @@ const removeTodo = function(todos, text){
     todos.splice(findTodoIndex(todos,text),1)
 }
 
-removeTodo(todos, 'Text 3')
-console.log(todos[2])
+const getThingsToDo = function(todos){
+    return todos.filter(function(todo,index){
+        return !todo.completed
+    })
+}
+
+const sortTodo = function(todos){
+    todos.sort(function(a,b){
+        if(a.completed){
+            return 1
+        }else{
+            return -1
+        }
+    })
+}
+
+sortTodo(todos)
+console.log(todos)
