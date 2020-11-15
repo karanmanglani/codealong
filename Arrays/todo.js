@@ -27,5 +27,5 @@ const removeTodo = function(todos, text){
     todos.splice(findTodoIndex(todos,text),1)
 }
 
-removeTodo(todos, 'TeX 3')
+removeTodo(todos, 'Text 3')
 console.log(todos[2])
