@@ -12,16 +12,22 @@ const notes = [
         body: 'Body 3'
     }
 ]
-// DOM - Object in js that models out html document
+// // DOM - Object in js that models out html document
 
-// document.querySelector('p').remove() 
+// // document.querySelector('p').remove() 
 
-const p = document.querySelectorAll('p')
-p.forEach(function(e){
-    e.textContent = '*********'
+// const p = document.querySelectorAll('p')
+// p.forEach(function(e){
+//     e.textContent = '*********'
+// })
+
+// // Adding new  element
+// const newParagraph = document.createElement('p')
+// newParagraph.textContent = 'This is the new Paragraph'
+// document.querySelector('body').appendChild(newParagraph)
+
+// Handeling User Interaction
+document.querySelector('button').addEventListener('click',function(e){
+    console.log('Did this work')
+    e.target.textContent = 'This button was clicked'
 })
-
-// Adding new  element
-const newParagraph = document.createElement('p')
-newParagraph.textContent = 'This is the new Paragraph'
-document.querySelector('body').appendChild(newParagraph)

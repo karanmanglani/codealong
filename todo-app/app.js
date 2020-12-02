@@ -29,3 +29,7 @@ incompleteTodos.forEach(function(e){
     newParagraph.textContent = e.text
     document.querySelector('body').appendChild(newParagraph)
 })
+
+document.querySelector('button').addEventListener('click',function(e){
+    console.log('This button is clicked')
+})
