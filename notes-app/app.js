@@ -31,3 +31,9 @@ document.querySelector('button').addEventListener('click',function(e){
     console.log('Did this work')
     e.target.textContent = 'This button was clicked'
 })
+
+document.querySelector('#removeAll').addEventListener('click',function(e){
+    document.querySelectorAll('.note').forEach(function(note){
+        note.remove()
+    })
+})

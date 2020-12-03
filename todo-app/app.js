@@ -30,6 +30,6 @@ incompleteTodos.forEach(function(e){
     document.querySelector('body').appendChild(newParagraph)
 })
 
-document.querySelector('button').addEventListener('click',function(e){
+document.querySelector('.addTodo').addEventListener('click',function(e){
     console.log('This button is clicked')
 })
