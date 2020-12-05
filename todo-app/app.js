@@ -30,6 +30,16 @@ incompleteTodos.forEach(function(e){
     document.querySelector('body').appendChild(newParagraph)
 })
 
-document.querySelector('.addTodo').addEventListener('click',function(e){
-    console.log('This button is clicked')
+document.querySelector('#addTodo').addEventListener('click',function(e){
+    todoText = document.querySelector('#newTodo').value
+    newTodo = {text: todoText,completed: false}
+    todos.push(newTodo)
+    const newTodoElement = document.createElement('p')
+    newTodoElement.textContent = todoText
+    document.querySelector('body').appendChild(newTodoElement)
+    console.log(todos)
+})
+
+document.querySelector('#newTodo').addEventListener('input',function(e){
+    console.log(e.target.value)
 })

@@ -37,3 +37,7 @@ document.querySelector('#removeAll').addEventListener('click',function(e){
         note.remove()
     })
 })
+
+document.querySelector('#searchText').addEventListener('input',function(e){
+    console.log(e.target.value)
+})
