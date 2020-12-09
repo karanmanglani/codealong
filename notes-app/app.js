@@ -54,13 +54,14 @@ document.querySelector('button').addEventListener('click',function(e){
     e.target.textContent = 'This button was clicked'
 })
 
-document.querySelector('#removeAll').addEventListener('click',function(e){
-    document.querySelectorAll('.note').forEach(function(note){
-        note.remove()
-    })
-})
 
 document.querySelector('#searchText').addEventListener('input',function(e){
     filters.searchText = e.target.value
     renderNotes(notes,filters)
+})
+
+document.querySelector('#first-name').addEventListener('submit',function(e){
+    e.preventDefault()
+    console.log(e.target.elements.firstName.value)
+    e.target.elements.firstName.value = ''
 })
